@@ -6,8 +6,13 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { PenLine, Tag, Send, CheckCircle } from "lucide-react";
 import { SignaturePanel } from "./signature-panel";
 import { TaggingPanel } from "./tagging-panel";
+import { Document } from "@/lib/types/document";
+interface DocumentActionsProps {
+  document: Document;  // Add this interface
+}
 
-export function DocumentActions() {
+export function DocumentActions({ document }: DocumentActionsProps) {  // Add document prop
+  
   return (
     <Card className="mt-6">
       <Tabs defaultValue="sign" className="w-full">

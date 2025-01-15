@@ -3,8 +3,14 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ZoomIn, ZoomOut, RotateCw, Download } from "lucide-react";
+import { Document } from "@/lib/types/document";
 
-export function DocumentViewer() {
+
+interface DocumentViewerProps {
+  document: Document;  // Add this interface
+}
+
+export function DocumentViewer({ document }: DocumentViewerProps) {  // Add document prop
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
